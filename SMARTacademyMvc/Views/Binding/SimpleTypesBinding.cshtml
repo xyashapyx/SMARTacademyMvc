@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "SimpleTypesBinding";
+}
+
+<h2>SimpleTypesBinding</h2>
+
+@Html.ActionLink("No binding", "NoBinding", "Binding")
+<br />
+@Html.ActionLink("Binding with Class Types", "BindingWithClassTypes", "Binding")
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <h4>Enter Details</h4>
+        <hr />
+        <div class="form-group">
+            @Html.Label("ID:", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBox("StudentID")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Name:", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBox("StudentFirstName")
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+                @ViewBag.Message
+            </div>
+        </div>
+    </div>
+}
