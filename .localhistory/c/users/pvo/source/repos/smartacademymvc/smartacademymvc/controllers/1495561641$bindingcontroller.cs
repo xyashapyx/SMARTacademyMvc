@@ -4,11 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SMARTacademyMvc.Filters;
 
 namespace SMARTacademyMvc.Controllers
 {
-    [LogActionFilter]
     public class BindingController : Controller
     {
         public ActionResult NoBinding()
